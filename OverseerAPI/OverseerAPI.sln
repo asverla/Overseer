@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverseerAPI", "OverseerAPI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverseerAPI.Tests", "OverseerAPI.Tests\OverseerAPI.Tests.csproj", "{A38546C9-AC4B-43F6-9CEF-22618A30E263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverseerAPI.Model", "OverseerAPI.Models\OverseerAPI.Model.csproj", "{4C08F5AC-EE6E-4505-B7CC-5CCBC9579B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverseerAPI.Data", "OverseerAPI.Data\OverseerAPI.Data.csproj", "{9565054C-845D-4645-8227-0060E5D50E77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A38546C9-AC4B-43F6-9CEF-22618A30E263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A38546C9-AC4B-43F6-9CEF-22618A30E263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A38546C9-AC4B-43F6-9CEF-22618A30E263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C08F5AC-EE6E-4505-B7CC-5CCBC9579B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C08F5AC-EE6E-4505-B7CC-5CCBC9579B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C08F5AC-EE6E-4505-B7CC-5CCBC9579B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C08F5AC-EE6E-4505-B7CC-5CCBC9579B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9565054C-845D-4645-8227-0060E5D50E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9565054C-845D-4645-8227-0060E5D50E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9565054C-845D-4645-8227-0060E5D50E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9565054C-845D-4645-8227-0060E5D50E77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
