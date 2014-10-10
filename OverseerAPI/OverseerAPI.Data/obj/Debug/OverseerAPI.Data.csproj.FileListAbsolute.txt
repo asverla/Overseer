@@ -1,0 +1,16 @@
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\obj\Debug\OverseerAPI.Data.csprojResolveAssemblyReference.cache
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\OverseerAPI.Data.dll.config
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\OverseerAPI.Data.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\OverseerAPI.Data.pdb
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\EntityFramework.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\OverseerAPI.Models.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\OverseerAPI.Models.pdb
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\EntityFramework.xml
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\obj\Debug\OverseerAPI.Data.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Data\obj\Debug\OverseerAPI.Data.pdb

@@ -53,15 +53,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Interface\ITimeEntryService.cs" />
     <Compile Include="Repository\OverseerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Interface\IUserService.cs" />
+    <Compile Include="Service\TimeEntryService.cs" />
     <Compile Include="Service\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OverseerAPI.Models\OverseerAPI.Model.csproj">
+      <Project>{4C08F5AC-EE6E-4505-B7CC-5CCBC9579B87}</Project>
+      <Name>OverseerAPI.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

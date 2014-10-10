@@ -9,12 +9,17 @@ using System.Web.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using OverseerAPI.Data.Interface;
+using OverseerAPI.Data.Service;
 using OverseerAPI.Models;
+using OverseerAPI.Models.User;
 using OverseerAPI.Providers;
 using OverseerAPI.Results;
+using OverseerAPI.ViewModel;
 
 namespace OverseerAPI.Controllers
 {
@@ -24,9 +29,17 @@ namespace OverseerAPI.Controllers
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
+        private readonly IUserService _service;
 
         public AccountController()
+            : this(new UserService())
         {
+
+        }
+
+        public AccountController(IUserService service)
+        {
+            this._service = service;
         }
 
         public AccountController(ApplicationUserManager userManager,
@@ -52,6 +65,21 @@ namespace OverseerAPI.Controllers
 
         // GET api/Account/UserInfo
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [Route("AspNetUserInfo")]
+        public UserInfoViewModel GetAspNetUserInfo()
+        {
+            ExternalLoginData externalLogin = ExternalLoginData.FromIdentity(User.Identity as ClaimsIdentity);
+
+            return new UserInfoViewModel
+            {
+                Email = User.Identity.GetUserName(),
+                HasRegistered = externalLogin == null,
+                LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
+            };
+        }
+
+        // GET api/Account/UserInfo
+        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("UserInfo")]
         public UserInfoViewModel GetUserInfo()
         {
@@ -61,7 +89,9 @@ namespace OverseerAPI.Controllers
             {
                 Email = User.Identity.GetUserName(),
                 HasRegistered = externalLogin == null,
-                LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
+                LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null,
+                ApiKey = "=)",
+                User = this._service.Get(this.Authentication.User.Identity.GetUserName())
             };
         }
 
@@ -334,6 +364,12 @@ namespace OverseerAPI.Controllers
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
+            }
+            // Save additional info to User table
+            else if(result.Succeeded)
+            {
+                var userAddtionalInfo = new User(user.Id, user.UserName);
+                var id = _service.Add(userAddtionalInfo);
             }
 
             return Ok();

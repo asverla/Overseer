@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using OverseerAPI.Models.User;
 
-namespace OverseerAPI.Data.Service
+namespace OverseerAPI.Data.Interface
 {
     public interface IUserService
     {
-        string Username { get; set; }
-        string Password { get; set; }
+        string Add(User user);
+        User Get(string id);
+        List<User> Get();
     }
 }
 

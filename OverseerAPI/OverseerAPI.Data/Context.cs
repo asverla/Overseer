@@ -1,5 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using OverseerAPI.Models.TimeEntry;
+using OverseerAPI.Models.User;
 
 namespace OverseerAPI.Data
 {
@@ -18,7 +20,10 @@ namespace OverseerAPI.Data
             // Drops the database if models changes in OverseerAPI.Model
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
             // Sets tables to none pluralized table names.
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Entity<User>().HasOptional(s => s.Team);
+            //modelBuilder.Entity<User>().HasOptional(a => a.AspNetUserId);
+            modelBuilder.Entity<TimeEntry>().ToTable("TimeEntries");
         }
     }
 }
