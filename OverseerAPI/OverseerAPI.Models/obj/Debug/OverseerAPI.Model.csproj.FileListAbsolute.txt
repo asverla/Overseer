@@ -12,3 +12,17 @@ C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\
 C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Model.csprojResolveAssemblyReference.cache
 C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Models.dll
 C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Models.pdb
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\OverseerAPI.Models.dll.config
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\OverseerAPI.Models.dll
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\OverseerAPI.Models.pdb
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\EntityFramework.dll
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\EntityFramework.xml
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Models.dll
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Models.pdb
+C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Model.csprojResolveAssemblyReference.cache
