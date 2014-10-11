@@ -32,7 +32,7 @@ namespace OverseerAPI.Data.Service
 
         public User Get(string username)
         {
-            var user = this._repository.Query<User>().Include(f => f.Team).SingleOrDefault(o => o.Username == username);
+            var user = this._repository.Query<User>().SingleOrDefault(o => o.Username == username);
 
             return user;
         }

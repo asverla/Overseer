@@ -21,9 +21,9 @@ namespace OverseerAPI.Data
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
             // Sets tables to none pluralized table names.
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Entity<User>().HasOptional(s => s.Team);
+            modelBuilder.Entity<User>();
             //modelBuilder.Entity<User>().HasOptional(a => a.AspNetUserId);
-            modelBuilder.Entity<TimeEntry>().ToTable("TimeEntries");
+            modelBuilder.Entity<TimeEntry>();
         }
     }
 }

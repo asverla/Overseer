@@ -27,6 +27,7 @@ namespace OverseerAPI.Controllers
         {
             this._service = service;
         }
+
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("Get")]
         // GET api/values
@@ -35,22 +36,30 @@ namespace OverseerAPI.Controllers
             return this._service.Get();
         }
 
+        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [Route("Get")]
         // GET api/values/5
-        public string Get(int id)
+        public TimeEntry Get(int id)
         {
-            return "value";
+            return this._service.Get(id);
         }
 
+        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [Route("Post")]
         // POST api/values
         public void Post([FromBody]string value)
         {
         }
 
+        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [Route("Put")]
         // PUT api/values/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
+        [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [Route("Delete")]
         // DELETE api/values/5
         public void Delete(int id)
         {
