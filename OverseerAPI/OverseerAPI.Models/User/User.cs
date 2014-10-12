@@ -37,10 +37,10 @@ namespace OverseerAPI.Models.User
         public int ProfilePictureFileSize { get; set; }
         public string Settings { get; set; }
         [ForeignKey("WorkTimer")]
-        public int WorkTimerId { get; set; }
+        public int? WorkTimerId { get; set; }
         public virtual WorkTimer.WorkTimer WorkTimer { get; set; }
         [ForeignKey("TimeEntry")]
-        public int TimeEntryId { get; set; }
+        public int? TimeEntryId { get; set; }
         public virtual TimeEntry.TimeEntry TimeEntry { get; set; }
         //[ForeignKey("CurrentTask")]
         //public int? CurrentTaskId { get; set; }

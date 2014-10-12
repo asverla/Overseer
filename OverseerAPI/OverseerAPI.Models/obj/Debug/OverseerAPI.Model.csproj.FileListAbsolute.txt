@@ -26,3 +26,5 @@ C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\
 C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Models.dll
 C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Models.pdb
 C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\obj\Debug\OverseerAPI.Model.csprojResolveAssemblyReference.cache
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\OverseerAPI.Data.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI.Models\bin\Debug\OverseerAPI.Data.pdb

@@ -372,19 +372,6 @@ namespace OverseerAPI.Controllers
             // Save additional info to User table
             else if(result.Succeeded)
             {
-                if (!_teamService.Get().Any())
-                    _teamService.Add(new Team()
-                    {
-                        Name = "Standout",
-                        Subdomain = "standout",
-                        HourlyRate = 800,
-                        ExpectedDailyHours = 8,
-                        EncryptionKey = "hemlig",
-                        FortnoxApiKey = "hemlig",
-                        FortnoxDb = "EttNamn",
-                        Settings = "Vad?",
-                        CurrencyCode = "SEK"
-                    });
                 var userAddtionalInfo = new User(user.Id, user.UserName);
                 var id = _service.Add(userAddtionalInfo);
             }

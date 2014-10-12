@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="DropCreateInitializer.cs" />
+    <Compile Include="IdentityContext.cs" />
     <Compile Include="Interface\ITeamService.cs" />
     <Compile Include="Interface\ITimeEntryService.cs" />
     <Compile Include="Repository\OverseerRepository.cs" />
