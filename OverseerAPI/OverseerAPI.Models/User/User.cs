@@ -9,15 +9,19 @@ namespace OverseerAPI.Models.User
     {
         public User()
         {
+            CreatedAt = DateTime.Now;
+            UpdatedAt = DateTime.Now;
         }
-
         public User(string id, string username)
         {
             AspNetUserId = id;
             Username = username;
+            CreatedAt = DateTime.Now;
+            UpdatedAt = DateTime.Now;
         }
 
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int UserId { get; set; }
         public string AspNetUserId { get; set; }
         public string Username { get; set; }
         public string FirstName { get; set; }
@@ -25,7 +29,7 @@ namespace OverseerAPI.Models.User
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public string TimeZone { get; set; }
-        public DateTime LastActive { get; set; }
+        public DateTime? LastActive { get; set; }
         public string MainUserType { get; set; }
         public string ApiKey { get; set; }
         public string Locale { get; set; }
@@ -33,18 +37,20 @@ namespace OverseerAPI.Models.User
         public int ProfilePictureFileSize { get; set; }
         public string Settings { get; set; }
         [ForeignKey("WorkTimer")]
-        public int? WorkTimerId { get; set; }
+        public int WorkTimerId { get; set; }
+        public virtual WorkTimer.WorkTimer WorkTimer { get; set; }
         [ForeignKey("TimeEntry")]
-        public int? TimeEntryId { get; set; }
-        [ForeignKey("CurrentTask")]
-        public int? CurrentTaskId { get; set; }
+        public int TimeEntryId { get; set; }
+        public virtual TimeEntry.TimeEntry TimeEntry { get; set; }
+        //[ForeignKey("CurrentTask")]
+        //public int? CurrentTaskId { get; set; }
         public string AuthCode { get; set; }
         [DefaultValue(false)]
         public bool EnableExperimentalFeatures { get; set; }
         public string UnconfirmedEmail { get; set; }
-        public DateTime ConfirmedAt { get; set; }
+        public DateTime? ConfirmedAt { get; set; }
         public string ConfirmedToken { get; set; }
-        public DateTime ConfirmedSentAt { get; set; }
+        public DateTime? ConfirmedSentAt { get; set; }
         [DefaultValue(false)]
         public bool Unsubscribed { get; set; }
         [DefaultValue(false)]

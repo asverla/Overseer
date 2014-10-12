@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -16,6 +17,7 @@ using Microsoft.Owin.Security.OAuth;
 using OverseerAPI.Data.Interface;
 using OverseerAPI.Data.Service;
 using OverseerAPI.Models;
+using OverseerAPI.Models.Team;
 using OverseerAPI.Models.User;
 using OverseerAPI.Providers;
 using OverseerAPI.Results;
@@ -30,16 +32,18 @@ namespace OverseerAPI.Controllers
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
         private readonly IUserService _service;
+        private readonly ITeamService _teamService;
 
         public AccountController()
-            : this(new UserService())
+            : this(new UserService(), new TeamService())
         {
-
+            // Blank!
         }
 
-        public AccountController(IUserService service)
+        public AccountController(IUserService service, ITeamService teamService)
         {
             this._service = service;
+            this._teamService = teamService;
         }
 
         public AccountController(ApplicationUserManager userManager,
@@ -368,6 +372,19 @@ namespace OverseerAPI.Controllers
             // Save additional info to User table
             else if(result.Succeeded)
             {
+                if (!_teamService.Get().Any())
+                    _teamService.Add(new Team()
+                    {
+                        Name = "Standout",
+                        Subdomain = "standout",
+                        HourlyRate = 800,
+                        ExpectedDailyHours = 8,
+                        EncryptionKey = "hemlig",
+                        FortnoxApiKey = "hemlig",
+                        FortnoxDb = "EttNamn",
+                        Settings = "Vad?",
+                        CurrencyCode = "SEK"
+                    });
                 var userAddtionalInfo = new User(user.Id, user.UserName);
                 var id = _service.Add(userAddtionalInfo);
             }

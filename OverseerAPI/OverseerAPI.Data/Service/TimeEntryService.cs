@@ -32,7 +32,7 @@ namespace OverseerAPI.Data.Service
 
         public TimeEntry Get(int id)
         {
-            return this._repository.Query<TimeEntry>().SingleOrDefault(o => o.Id == id);
+            return this._repository.Query<TimeEntry>().SingleOrDefault(o => o.TimeEntryId == id);
         }
 
         public List<TimeEntry> Get()

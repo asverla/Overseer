@@ -11,13 +11,21 @@ namespace OverseerAPI.Models.Team
 {
     public class TeamMember
     {
+        public TeamMember()
+        {
+            CreatedAt = DateTime.Now;
+            UpdatedAt = DateTime.Now;
+        }
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int TeamMemberId { get; set; }
         [ForeignKey("User")]
-        public int? UserId { get; set; }
+        public int UserId { get; set; }
+        public virtual User.User User { get; set; }
         public string TeamRole { get; set; }
         [ForeignKey("Team")]
-        public int? TeamId { get; set; }
+        public int TeamId { get; set; }
+        public virtual Models.Team.Team Team { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int HourlyRate { get; set; }
@@ -27,13 +35,12 @@ namespace OverseerAPI.Models.Team
         public int ExpectedDailyHours { get; set; }
         [DefaultValue(true)]
         public bool Active { get; set; }
-        public DateTime DeactivatedAt { get; set; }
+        public DateTime? DeactivatedAt { get; set; }
         public string Settings { get; set; }
-        [ForeignKey("TimeReportsUser")]
-        public int? TimeReportsUserId { get; set; }
+        public int TimeReportsUserId { get; set; }
         public string Phone { get; set; }
-        [ForeignKey("Customer")]
-        public int? CustomerId { get; set; }
+        //[ForeignKey("Customer")]
+        //public int? CustomerId { get; set; }
     }
 }
 
