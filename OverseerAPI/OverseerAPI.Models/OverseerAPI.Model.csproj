@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Project\Project.cs" />
+    <Compile Include="Project\ProjectMember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task\Task.cs" />
     <Compile Include="Team\TeamMember.cs" />
     <Compile Include="TimeEntry\TimeEntry.cs" />
     <Compile Include="User\AccountBindingModels.cs" />

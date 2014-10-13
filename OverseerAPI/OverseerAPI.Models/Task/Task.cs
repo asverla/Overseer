@@ -21,10 +21,10 @@ namespace OverseerAPI.Models.Task
         public DateTime UpdatedAt { get; set; }
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
-        public Project.Project Project { get; set; }
+        public virtual Project.Project Project { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
-        public User.User User { get; set; }
+        public virtual User.User User { get; set; }
         public string Description { get; set; }
         public int TotalTime { get; set; }
         public bool Done { get; set; }
@@ -35,7 +35,7 @@ namespace OverseerAPI.Models.Task
         public DateTime FinishedAt { get; set; }
         [ForeignKey("Team")]
         public int TeamId { get; set; }
-        public Team.Team Team { get; set; }
+        public virtual Team.Team Team { get; set; }
         public double Velocity { get; set; }
         public bool PayPerHour { get; set; }
         public DateTime EarliestStart { get; set; }
@@ -57,7 +57,7 @@ namespace OverseerAPI.Models.Task
         public double VatPercentage { get; set; }
         [ForeignKey("LastUpdatedBy")]
         public int LastUpdatedById { get; set; }
-        public User.User LastUpdatedBy { get; set; }
+        public virtual User.User LastUpdatedBy { get; set; }
     }
 }
 

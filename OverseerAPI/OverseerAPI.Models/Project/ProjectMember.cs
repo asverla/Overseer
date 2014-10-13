@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,15 +9,19 @@ namespace OverseerAPI.Models.Project
 {
     public class ProjectMember
     {
+        public ProjectMember()
+        {
+            Users = new List<User.User>();
+        }
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProjectMembersId { get; set; }
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
-        public Project Project { get; set; }
+        public virtual Project Project { get; set; }
 
         [ForeignKey("Users")]
         public int UserId { get; set; }
-        public IQueryable<User.User> Users { get; set; }
+        public virtual ICollection<User.User> Users { get; set; }
         public int ProjectRole { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
@@ -26,13 +31,13 @@ namespace OverseerAPI.Models.Project
         public int Position { get; set; }
         [ForeignKey("Team")]
         public int TeamId { get; set; }
-        public Team.Team Team { get; set; }
+        public virtual Team.Team Team { get; set; }
         public string TitleInProject { get; set; }
         [DefaultValue(false)]
         public bool ResponsibleForProject { get; set; }
         [ForeignKey("TeamMember")]
         public int TeamMemberId { get; set; }
-        public Team.TeamMember TeamMember { get; set; }
+        public virtual Team.TeamMember TeamMember { get; set; }
     }
 }
 

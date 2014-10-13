@@ -27,6 +27,9 @@ namespace OverseerAPI.Data
             modelBuilder.Entity<TimeEntry>().HasOptional(o => o.Project).WithOptionalDependent().WillCascadeOnDelete(false);
             modelBuilder.Entity<TimeEntry>().HasOptional(o => o.Team).WithOptionalDependent().WillCascadeOnDelete(false);
             modelBuilder.Entity<WorkTimer>().HasOptional(o=>o.Team).WithOptionalDependent().WillCascadeOnDelete(false);
+            modelBuilder.Entity<Project>().HasOptional(o=>o.Team).WithOptionalDependent().WillCascadeOnDelete(false);
+            modelBuilder.Entity<TeamMember>().HasOptional(o=>o.Team).WithOptionalDependent().WillCascadeOnDelete(false);
+            modelBuilder.Entity<Task>().HasOptional(o=>o.User).WithOptionalDependent().WillCascadeOnDelete(false);
             
             // Sets tables to none pluralized table names.
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

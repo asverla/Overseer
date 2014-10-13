@@ -18,7 +18,7 @@ namespace OverseerAPI.Data
             var roleManager = new RoleManager<IdentityRole>(roleStore);
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
-            var appUser = new ApplicationUser { UserName = "haris@standout.se", Email = "haris@standout.se" };
+            var appUser = new ApplicationUser { UserName = "test@standout.se", Email = "test@standout.se" };
 
             userManager.Create(appUser, "password");
             roleManager.Create(new IdentityRole { Name = "Kung" });
@@ -35,12 +35,12 @@ namespace OverseerAPI.Data
             var user = new User()
             {
                 AspNetUserId = "0",
-                FirstName = "Haris",
-                LastName = "Kljajic",
+                FirstName = "Test",
+                LastName = "Daaa",
                 ApiKey = "?",
                 AuthCode = "asdas",
                 AvatarColor = "#FFFF",
-                Username = "haris@standout.se",
+                Username = "test@standout.se",
                 Initials = "HA",
                 Settings = "Vad?",
                 InitialsColor = "#FFFFF"
