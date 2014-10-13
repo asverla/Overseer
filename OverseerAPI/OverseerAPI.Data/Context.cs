@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using OverseerAPI.Models.Project;
+using OverseerAPI.Models.Task;
 using OverseerAPI.Models.Team;
 using OverseerAPI.Models.TimeEntry;
 using OverseerAPI.Models.User;
@@ -43,5 +44,7 @@ namespace OverseerAPI.Data
         public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<WorkTimer> WorkTimers { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectMember> ProjectMembers { get; set; }
+        public DbSet<Task> Tasks { get; set; }
     }
 }
