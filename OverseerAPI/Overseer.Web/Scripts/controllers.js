@@ -22,12 +22,17 @@ angular.module('app.controllers', [])
     }])
 
     // Path: /login
-    .controller('LoginCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+    .controller('LoginCtrl', ['$scope', '$location', '$window', 'AuthService', function ($scope, $location, $window, AuthService) {
         $scope.$root.title = 'AngularJS SPA | Sign In';
         // TODO: Authorize a user
-        $scope.login = function () {
-            $location.path('/');
-            return false;
+        $scope.login = function (credentials) {
+            AuthService.login(credentials).then(function (user) {
+                //$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+                $scope.setCurrentUser(user);
+            }, function () {
+                //$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+            });
+
         };
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });

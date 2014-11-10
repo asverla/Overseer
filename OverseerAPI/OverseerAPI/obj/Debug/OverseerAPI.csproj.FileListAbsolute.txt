@@ -195,3 +195,6 @@ C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\bin\System.
 C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\obj\Debug\OverseerAPI.csprojResolveAssemblyReference.cache
 C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\obj\Debug\OverseerAPI.dll
 C:\Users\Alexander\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\obj\Debug\OverseerAPI.pdb
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\bin\System.Web.Cors.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\bin\System.Web.Http.Cors.dll
+C:\Users\Haris Kljajic\Documents\GitHub\Overseer\OverseerAPI\OverseerAPI\bin\System.Web.Http.Cors.xml

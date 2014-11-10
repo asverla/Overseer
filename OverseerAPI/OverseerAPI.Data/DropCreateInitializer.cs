@@ -65,7 +65,6 @@ namespace OverseerAPI.Data
                 };
 
                 context.Entry(team).State = EntityState.Added;
-                context.SaveChanges();
 
                 var teamMember = new TeamMember()
                 {
@@ -83,8 +82,6 @@ namespace OverseerAPI.Data
                 };
 
                 context.Entry(teamMember).State = EntityState.Added;
-
-                context.SaveChanges();
 
                 var project = new Project
                 {
@@ -109,9 +106,8 @@ namespace OverseerAPI.Data
                 };
 
                 context.Entry(project).State = EntityState.Added;
-
-                context.SaveChanges();
             }
+            context.SaveChanges();
         }
     }
 }
